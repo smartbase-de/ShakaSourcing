@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://shakasourcing.com",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -33,7 +33,7 @@ export default defineConfig({
       },
     },
   }), starlight({
-    title: "ScrewFast Docs",
+    title: "Shaka Sourcing Docs",
     defaultLocale: "root",
     // https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md
     // If no Astro and Starlight i18n configurations are provided, the built-in default locale is used in Starlight and a matching Astro i18n configuration is generated/used.
@@ -83,7 +83,7 @@ export default defineConfig({
       },
     ],
     social: [
-      { icon: "github", label: "GitHub", href: "https://github.com/mearashadowfax/ScrewFast" },
+      { icon: "github", label: "GitHub", href: "https://github.com/mearashadowfax/Shaka Sourcing" },
     ],
     disable404Route: true,
     customCss: ["./src/assets/styles/starlight.css"],
