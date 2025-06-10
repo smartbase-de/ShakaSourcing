@@ -14,6 +14,9 @@ const subTitle: string =
   "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
 const formTitle: string = "Fill in the form below";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
+
+// Get the subject from the query string if present
+const { subject = "" } = Astro.props;
 ---
 
 <!-- Contact Us -->
@@ -61,6 +64,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
               id="hs-about-contacts"
               label="Details"
               name="hs-about-contacts"
+              value={subject}
             />
           </div>
 
@@ -120,3 +124,15 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
     </div>
   </div>
 </section>
+
+<script>
+  // Client-side: pre-fill the Details textarea from the subject query param
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get('subject');
+    if (subject) {
+      const details = document.getElementById('hs-about-contacts');
+      if (details && details instanceof HTMLTextAreaElement) details.value = subject;
+    }
+  }
+</script>

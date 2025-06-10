@@ -5,7 +5,7 @@
 Shaka Sourcing is an **open-source template** designed for quick and efficient web project setup, blending **minimalism with functionality**. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, Shaka Sourcing provides everything you need. By combining the power of the [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Preline UI](https://preline.co/), this template offers a functional and aesthetically pleasing solution for your web presence.
 
 <p align="left">
-    <a href="https://screwfast.uk" target="_blank">
+    <a href="https://shakasourcing.com" target="_blank">
       <img src="https://vyclk3sx0z.ufs.sh/f/hv6ttNERWpXu6c2AP0GCBnYt4h3FbsMuKyP5RxQ21HvzIae0" alt="Shaka Sourcing Demo" width="180"/></a>
   &nbsp;&nbsp;&nbsp;
     <a href="https://atemplate.com/item/screwfast" target="_blank">
@@ -533,7 +533,7 @@ Structured data in JSON-LD format can be managed by the `Meta.astro` component, 
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Shaka Sourcing",
-    "url": "https://screwfast.uk",
+    "url": "https://shakasourcing.com",
     "description": "Discover top-quality hardware tools and services"
   }}
 >

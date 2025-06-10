@@ -8,6 +8,8 @@ const pageTitle: string = `Contact | ${SITE.title}`;
 const metaDescription =
   "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
 const ogTitle = "Contact Us | Shaka Sourcing";
+
+const subject = Astro.url?.searchParams.get('subject') ?? "";
 ---
 
 <MainLayout
@@ -17,20 +19,20 @@ const ogTitle = "Contact Us | Shaka Sourcing";
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/contact",
-    url: "https://screwfast.uk/contact",
+    "@id": "https://shakasourcing.com/contact",
+    url: "https://shakasourcing.com/contact",
     name: "Contact Us | Shaka Sourcing",
     description:
       "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk",
+      url: "https://shakasourcing.com",
       name: "Shaka Sourcing",
       description:
-        "Shaka Sourcing offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Shaka Sourcing offers top-tier sourcing and expert construction services to meet all your project needs.",
     },
     inLanguage: "en-US",
   }}
 >
-  <ContactSection />
+  <ContactSection subject={subject} />
 </MainLayout>
