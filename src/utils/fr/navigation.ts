@@ -1,4 +1,3 @@
-
 const navBarLinks = [
   { name: "Accueil", url: "/fr" },
   { name: "Produits", url: "/fr/products" },
@@ -21,7 +20,7 @@ const footerLinks = [
     links: [
       { name: "À propos de nous", url: "#" },
       { name: "Blog", url: "/fr/blog" },
-      { name: "Carrières", url: "#" },
+      { name: "Carrières", url: "/fr/careers" },
       { name: "Clients", url: "#" },
     ],
   },

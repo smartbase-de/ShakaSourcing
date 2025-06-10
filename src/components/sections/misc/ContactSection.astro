@@ -39,7 +39,9 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         </h2>
         <!-- Form for user input with various input fields.-->
         <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
-        <form>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
@@ -63,7 +65,9 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
           </div>
 
           <div class="mt-4 grid">
-            <AuthBtn title="Send Message" />
+            <button type="submit" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap rounded-lg border border-transparent bg-orange-400 p-3 text-sm font-bold text-neutral-50 outline-hidden ring-zinc-500 transition duration-300 hover:bg-orange-500 focus-visible:ring-3 disabled:pointer-events-none disabled:opacity-50 dark:ring-zinc-200 dark:focus:outline-hidden dark:focus:ring-1 sm:w-auto">
+              Send Message
+            </button>
           </div>
 
           <div class="mt-3 text-center">
@@ -104,14 +108,14 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
-        <ContactIconBlock
+        <!--<ContactIconBlock
           heading="Contact us by email"
           content="Prefer the written word? Drop us an email at"
           isLinkVisible={true}
           linkTitle="support@shakasourcing.com"
           linkURL="#"
           ><Icon name="envelopeOpen" />
-        </ContactIconBlock>
+        </ContactIconBlock>-->
       </div>
     </div>
   </div>

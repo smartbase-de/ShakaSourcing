@@ -1,0 +1,60 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+const title = "Careers";
+const subTitle = "Join a fast-growing team at Shaka Sourcing and help shape the future of global industrial procurement. We value innovation, collaboration, and a drive for excellence.";
+const positions = [
+  {
+    title: "Procurement Specialist",
+    location: "Berlin, Germany / Hybrid",
+    type: "Full-time",
+    description: "Source and manage supplier relationships, negotiate contracts, and ensure timely delivery of industrial components.",
+  },
+  {
+    title: "Supply Chain Analyst",
+    location: "Remote / EU",
+    type: "Full-time",
+    description: "Analyze and optimize supply chain processes, identify cost-saving opportunities, and support logistics operations.",
+  },
+  {
+    title: "Sales Engineer",
+    location: "Berlin, Germany / Remote",
+    type: "Full-time",
+    description: "Engage with clients, understand technical requirements, and deliver tailored solutions for industrial sourcing needs.",
+  },
+  {
+    title: "Quality Assurance Inspector",
+    location: "Istanbul, TR",
+    type: "Contract",
+    description: "Inspect and test incoming products, ensure compliance with quality standards, and report on supplier performance.",
+  },
+  {
+    title: "Operations Manager",
+    location: "Berlin, Germany",
+    type: "Full-time",
+    description: "Oversee daily operations, coordinate between teams, and drive continuous improvement across the business.",
+  },
+];
+---
+<MainLayout title={title}>
+  <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <h1 class="text-2xl font-bold tracking-tight text-balance text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200 mb-4">{title}</h1>
+    <p class="mb-8 max-w-2xl text-neutral-600 dark:text-neutral-400">{subTitle}</p>
+    <section class="mb-12">
+      <h2 class="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Open Positions</h2>
+      <ul class="space-y-6">
+        {positions.map((job) => (
+          <li class="border rounded-lg p-6 bg-white dark:bg-neutral-900 shadow-sm">
+            <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">{job.title}</h3>
+            <div class="text-sm text-neutral-500 mb-2">{job.location} &bull; {job.type}</div>
+            <p class="text-neutral-700 dark:text-neutral-300 mb-2">{job.description}</p>
+            <a href="mailto:careers@screwfast.uk?subject=Application for {job.title}" class="inline-block mt-2 rounded bg-green-600 px-4 py-2 text-white font-semibold hover:bg-green-700 transition">Apply Now</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section class="mt-12">
+      <h2 class="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Our Culture & Growth</h2>
+      <p class="max-w-2xl text-neutral-700 dark:text-neutral-300 mb-4">At Shaka Sourcing, we believe in empowering our team to innovate, collaborate, and grow. We offer a dynamic environment where your ideas matter, and your work directly impacts our global success. Join us as we expand our reach and set new standards in industrial procurement.</p>
+    </section>
+  </div>
+</MainLayout>
